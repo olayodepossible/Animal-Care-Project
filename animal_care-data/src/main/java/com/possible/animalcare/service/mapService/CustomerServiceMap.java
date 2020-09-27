@@ -2,10 +2,11 @@ package com.possible.animalcare.service.mapService;
 
 import com.possible.animalcare.model.Customer;
 import com.possible.animalcare.service.CrudService;
+import com.possible.animalcare.service.CustomerService;
 
 import java.util.Set;
 
-public class CustomerServiceMap extends AbstractMapService<Customer, Long> implements CrudService<Customer, Long> {
+public class CustomerServiceMap extends AbstractMapService<Customer, Long> implements CustomerService {
     @Override
     public Customer findById(Long id) {
         return super.findById(id);
@@ -29,5 +30,10 @@ public class CustomerServiceMap extends AbstractMapService<Customer, Long> imple
     @Override
     public void deleteById(Long id) {
         super.deleteById(id);
+    }
+
+    @Override
+    public Customer findByLastName(String lastName) {
+        return null;
     }
 }
