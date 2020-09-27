@@ -2,9 +2,11 @@ package com.possible.animalcare.service.mapService;
 
 import com.possible.animalcare.model.Vet;
 import com.possible.animalcare.service.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
     @Override
     public Vet findById(Long id) {

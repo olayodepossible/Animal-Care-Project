@@ -3,9 +3,11 @@ package com.possible.animalcare.service.mapService;
 import com.possible.animalcare.model.Pet;
 import com.possible.animalcare.service.CrudService;
 import com.possible.animalcare.service.PetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetServiceMap extends AbstractMapService<Pet, Long> implements PetService {
     @Override
     public Pet findById(Long id) {

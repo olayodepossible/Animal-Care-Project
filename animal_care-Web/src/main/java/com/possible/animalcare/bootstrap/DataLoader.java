@@ -14,9 +14,9 @@ public class DataLoader implements CommandLineRunner {
     private final CustomerService customerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        this.customerService = new CustomerServiceMap();
-        this.vetService = new VetServiceMap();
+    public DataLoader(CustomerService customerService, VetService vetService) {
+        this.customerService = customerService;
+        this.vetService = vetService;
     }
 
     @Override
@@ -28,9 +28,9 @@ public class DataLoader implements CommandLineRunner {
         customerService.save(customer1);
 
         Customer customer2 = new Customer();
-        customer1.setId(2L);
-        customer1.setFirstName("Jane");
-        customer1.setLastName("Doe");
+        customer2.setId(2L);
+        customer2.setFirstName("Jane");
+        customer2.setLastName("Doe");
         customerService.save(customer2);
 
         System.out.println("Loaded Customer...");
