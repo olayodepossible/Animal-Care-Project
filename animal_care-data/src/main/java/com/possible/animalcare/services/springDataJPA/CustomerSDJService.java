@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 import java.util.HashSet;
 import java.util.Set;
 
-@Service("springDataJPA")
+@Service("customerSDJService")
 //@Profile("springDataJPA")
 public class CustomerSDJService implements CustomerService {
     private final CustomerRepository customerRepository;

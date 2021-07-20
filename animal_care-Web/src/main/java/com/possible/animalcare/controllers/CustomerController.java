@@ -13,7 +13,7 @@ public class CustomerController {
 
     private CustomerService customerService;
 
-    public CustomerController(@Qualifier("springDataJPA") CustomerService customerService) {
+    public CustomerController( CustomerService customerService) {
         this.customerService = customerService;
     }
 

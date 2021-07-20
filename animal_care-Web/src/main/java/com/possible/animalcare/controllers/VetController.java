@@ -1,6 +1,7 @@
 package com.possible.animalcare.controllers;
 
 import com.possible.animalcare.services.VetService;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -10,7 +11,7 @@ public class VetController {
 
     private VetService vetService;
 
-    public VetController(VetService vetService) {
+    public VetController(@Qualifier("vetSDJService") VetService vetService) {
         this.vetService = vetService;
     }
 
