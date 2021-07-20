@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf" th:replace="~{fragments/layout :: layout (~{::body},'customers-page')}">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers Page</title>
+</head>
+<body>
+<!-- /*@thymesVar id= "customer" type="com.possible.animalcare.model.Customer"*/ -->
+    <h1 th:text="'List of Customers'"></h1>
+
+    <table class="table table-striped">
+        <thead>
+            <th style="width: 150px">Id</th>
+            <th style="width: 150px">First Name</th>
+            <th style="width: 150px">Last Name</th>
+        </thead>
+        <tbody>
+            <tr th:each="customer: ${customers}">
+                <td th:text="${customer?.id}"></td>
+                <td th:text="${customer?.firstName}"></td>
+                <td th:text="${customer?.lastName}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
