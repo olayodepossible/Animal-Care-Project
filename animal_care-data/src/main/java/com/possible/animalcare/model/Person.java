@@ -1,5 +1,8 @@
 package com.possible.animalcare.model;
 
+import javax.persistence.MappedSuperclass;
+
+@MappedSuperclass
 public class Person extends BaseEntity {
     private String firstName;
     private String lastName;
@@ -19,4 +22,5 @@ public class Person extends BaseEntity {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
 }

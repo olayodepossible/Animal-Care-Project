@@ -1,6 +1,6 @@
 package com.possible.animalcare.controllers;
 
-import com.possible.animalcare.service.CustomerService;
+import com.possible.animalcare.services.CustomerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,7 +17,8 @@ public class CustomerController {
 
     @GetMapping("/customers")
     public String listOfCustomer(Model model){
-        model.addAttribute("customers", customerService.findAll());
+
+        model.addAttribute("customers",  customerService.findAll());
 
         return "customers/customers-page";
     }

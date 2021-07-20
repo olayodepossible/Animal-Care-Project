@@ -1,4 +1,4 @@
-package com.possible.animalcare.service.mapService;
+package com.possible.animalcare.services.mapService;
 
 import com.possible.animalcare.model.BaseEntity;
 

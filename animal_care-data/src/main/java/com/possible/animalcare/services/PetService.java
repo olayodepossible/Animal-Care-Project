@@ -1,4 +1,4 @@
-package com.possible.animalcare.service;
+package com.possible.animalcare.services;
 
 import com.possible.animalcare.model.Pet;
 

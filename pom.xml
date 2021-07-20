@@ -15,12 +15,12 @@
     </parent>
     <groupId>com.possible</groupId>
     <artifactId>animal-care</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>animal-care</name>
     <description>Animal Care project Using Spring Boot</description>
 
     <properties>
-        <java.version>14</java.version>
+        <java.version>11</java.version>
     </properties>
 
     <build>
@@ -38,5 +38,9 @@
             </plugin>
         </plugins>
     </build>
-
+    <!--<scm>
+        <connection>scm:git:https://github.com/olayodepossible/Animal-Care-Project.git</connection>
+        <developerConnection>scm:git:https://github.com/olayodepossible/Animal-Care-Project.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>-->
 </project>

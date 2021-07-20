@@ -1,8 +1,7 @@
-package com.possible.animalcare.service.mapService;
+package com.possible.animalcare.services.mapService;
 
 import com.possible.animalcare.model.Pet;
-import com.possible.animalcare.service.CrudService;
-import com.possible.animalcare.service.PetService;
+import com.possible.animalcare.services.PetService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
