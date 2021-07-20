@@ -4,12 +4,11 @@ import com.possible.animalcare.model.BaseEntity;
 import com.possible.animalcare.model.Pet;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.time.LocalDate;
 
-
+@Entity
+@Table(name = "visits")
 public class Visit extends BaseEntity {
 
     @Column(name = "visit_date")
@@ -20,7 +19,9 @@ public class Visit extends BaseEntity {
     @Column(name = "description")
     private String description;
 
-private Pet pet;
+    @ManyToOne
+    @JoinColumn(name = "pet_id")
+    private Pet pet;
 
     /**
      * Creates a new instance of Visit for the current date
